@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Programa Reajuste Salarial</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Programa Reajuste salarial</h1>
+
+  <label for="salario">Salario:</label><br>
+  <input type="number" id="salario" placeholder="Digite o salario"><br>
+
+  <label for="reajuste">Valor do reajuste percentual:</label><br>
+  <input type="number" id="reajuste" placeholder="Digite o valor"><br>
+
+  <button onclick="calcularSalario()">Calcular Salário</button>
+
+  <h2 id="resultado"></h2>
+
+  <script>
+    function calcularSalario() {
+      // Pegar os valores dos inputs
+      let salario = document.getElementById('salario').value;
+      let reajuste = document.getElementById('reajuste').value;
+
+      // Converter para número
+      salario = parseFloat(salario);
+      reajuste = parseFloat(reajuste);
+
+      // Verificar se os valores são válidos
+      if (isNaN(salario) || isNaN(reajuste)) {
+        document.getElementById('resultado').innerText = "Por favor, preencha os dois campos corretamente.";
+        return;
+      }
+
+      // Calcular o salário
+      let salarioReajustado = salario * (reajuste /100 +1);
+
+      // Mostrar o resultado
+      document.getElementById('resultado').innerText = "O salário reajustado é: R$ " + salarioReajustado.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>

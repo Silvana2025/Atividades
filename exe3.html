@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Idade</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Calculadora de Idade</h1>
+
+  
+  <label for="nascimento">Ano de Nascimento:</label><br>
+  <input type="number" id="nascimento" placeholder="Digite o ano de nascimento"><br>
+  
+  <label for="anoAtual">Ano Atual:</label><br>
+  <input type="number" id="anoAtual" placeholder="Digite o ano atual"><br>
+
+  <button onclick="calcularIdade()">Calcular Idade</button>
+
+  <h2 id="resultadoAnos"></h2>
+  <h2 id="resultadoMeses"></h2>
+  <h2 id="resultadoSemanas"></h2>
+  <h2 id="resultadoDias"></h2>
+
+  <script>
+    function calcularIdade() {
+      // Pegar os valores dos inputs
+      let nascimento = document.getElementById('nascimento').value;
+      let anoAtual =  document.getElementById('anoAtual').value;
+
+      // Converter para número inteiro
+      nascimento = parseInt(nascimento);
+      anoAtual = parseInt(anoAtual);
+
+      // Verificar se os valores são válidos
+      if (isNaN(nascimento) || isNaN(anoAtual)) {
+        document.getElementById('resultado').innerText = "Por favor, preencha os dois campos corretamente.";
+        return;
+      }
+
+      // Calcular a idade em anos
+      let idadeAno = anoAtual - nascimento;
+
+      // Calcular a idade em meses
+      let idadeMeses = idadeAno * 12;
+
+      // Calcular a idade em Dias
+      let idadeDias = idadeAno * 365;
+
+      // Calcular a idade em Semanas
+      let idadeSemanas = idadeAno * 52 
+
+      // Mostrar o resultado
+      document.getElementById('resultadoAnos').innerText = "Sua idade é: " + idadeAno + " anos";
+      document.getElementById('resultadoMeses').innerText = "Sua idade é: " + idadeMeses + " meses";
+      document.getElementById('resultadoSemanas').innerText = "Sua idade é: " + idadeSemanas + " semanas";
+      document.getElementById('resultadoDias').innerText = "Sua idade é: " + idadeDias + " dias";
+    }
+  </script>
+
+</body>
+</html>

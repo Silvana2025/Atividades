@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Peso e Quantidade de Racao</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Peso e Quantidade de Racao</h1>
+
+  
+  <label for="racao">Saco Racao Kg :</label><br>
+  <input type="number" id="racao" placeholder="Digite a qtd de racao em Kg"><br>
+  
+  <label for="gato">Qtd de racao para cada gato:</label><br>
+  <input type="number" id="gato" placeholder="Digite a qtd de racao para cada gato"><br>
+
+  <button onclick="calcular()">Calcular</button>
+
+  <h2 id="resultado"></h2>
+  
+  <script>
+    function calcular() {
+      // Pegar os valores dos inputs
+      let racao = document.getElementById('racao').value;
+      let gato =  document.getElementById('gato').value;
+
+      // Converter para número inteiro
+      racao = parseInt(racao);
+      gato = parseInt(gato);
+
+      // Verificar se os valores são válidos
+      if (isNaN(racao) || isNaN(gato)) {
+        document.getElementById('resultado').innerText = "Por favor, preencha os dois campos corretamente.";
+        return;
+      }
+
+      // Calcular quanto restara de racao apos 5 dias 
+      let racaoGrama = racao * 1000;
+      let resultado = (racaoGrama  - (gato * 5))/1000;
+
+      // Mostrar o resultado
+      document.getElementById('resultado').innerText = "Restara de racao apos 5 dias : " + resultado + " Kg";
+      
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Troca de Variaveis</title>
+  <style> 
+    body {
+      font-family: Arial;
+      margin: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Troca de Variaveis</h1>
+
+  
+  <label for="a">a:</label><br>
+  <input type="text" id="a" placeholder="Digite a"><br>
+  
+  <label for="b">b:</label><br>
+  <input type="text" id="b" placeholder="Digite b"><br>
+
+  <button onclick="trocar()"> Trocar</button>
+
+   <script>
+    function trocar() {
+      // Pegar os valores dos inputs
+      const a = document.getElementById('a');
+      const b =  document.getElementById('b');
+      
+      let temp = a.value;
+      a.value = b.value;
+      b.value = temp;
+ 
+    }
+  </script>
+
+</body>
+</html>
