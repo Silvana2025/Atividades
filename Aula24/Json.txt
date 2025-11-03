@@ -1,0 +1,285 @@
+[
+  { "id": 1, "name": "table", "price": 3000.9 },
+  { "id": 2, "name": "chair", "price": 429.9 },
+  { "id": 3, "name": "sofa", "price": 2500.0 },
+  { "id": 4, "name": "stove", "price": 1999.0 }
+]
+
+
+
+let orders =[{"orderId": 1, "customer": "Silvana", "total": 50.0},
+           {"orderId": 2, "customer": "Joao", "total": 55.9},
+           {"orderId": 3, "customer": "Pedro", "total": 65.9}
+
+];
+
+if (Array.isArray(pedidos) && pedidos.every(p => 
+  typeof p.orderId === "number" &&
+  typeof p.customer === "string" &&
+  typeof p.total === "number"
+)) {
+  console.log("✅ Array de pedidos válido!");
+  console.table(pedidos);
+} else {
+  console.error("❌ Estrutura inválida nos pedidos.");
+}
+
+
+
+JSON.parse(JSON.stringify(pedidos));
+
+
+
+const text = JSON.stringify(orders, null, 2);
+console.log(text);
+ [
+  {
+    "orderId": 1,
+    "customer": "Silvana",
+    "total": 50
+  },
+  {
+    "orderId": 2,
+    "customer": "Joao",
+    "total": 55.9
+  },
+  {
+    "orderId": 3,
+    "customer": "Pedro",
+    "total": 65.9
+  }
+]
+
+
+
+const pedidos = [
+  {
+    orderId: 1,
+    customer: "Silvana",
+    total: 50.0
+  },
+  {
+    orderId: 2,
+    customer: "Joao",
+    total: 55.9
+  },
+  {
+    orderId: 3,
+    customer: "Pedro",
+    total: 65.9
+  }
+];
+
+
+console.table(pedidos);
+
+
+
+const pedidos = [
+  { orderId: 1, customer: "Silvaba", total: 50.0 },
+  { orderId: 2, customer: "Joao", total: 55.9 },
+  { orderId: 3, customer: "Pedro", total: 65.9 }
+];
+
+
+console.table(pedidos, ["orderId"]);
+
+
+
+
+const pedidos = [
+  { orderId: 100, customer: "Alice", total: 120.50 },
+  { orderId: 101, customer: "Maria", total: 89.90 },
+  { orderId: 102, customer: "Luis", total: 150.00 },
+  { orderId: 103, customer: "Miguel", total: 200.75 }
+];
+
+const pedidosFiltrados = pedidos.filter(p => p.orderId > 101);
+
+console.table(pedidosFiltrados);
+
+
+
+const config = {
+  tema: "claro",
+  idioma: "BR",
+  notificacoes: true
+};
+
+if (
+  typeof config.tema === "string" &&
+  typeof config.idioma === "string" &&
+  typeof config.notificacoes === "boolean"
+) {
+  console.log("✅ Configuração válida!");
+  console.table(config);
+} else {
+  console.error("❌ Configuração inválida!");
+}
+
+
+
+const perfil = {
+  nome: "Silvana Soares",
+  idade: 25,
+  cidade: "Goiânia",
+  habilidades: ["JavaScript", "HTML", "CSS"]
+};
+
+if (
+  typeof perfil.nome === "string" &&
+  typeof perfil.idade === "number" &&
+  typeof perfil.cidade === "string" &&
+  Array.isArray(perfil.habilidades) &&
+  perfil.habilidades.every(h => typeof h === "string")
+) {
+  console.log("✅ Objeto 'perfil' válido!");
+  console.table(perfil);
+} else {
+  console.error("❌ Objeto 'perfil' inválido!");
+}
+
+
+
+const perfil = {
+  nome: "Silvana",
+  idade: 25,
+  email: "silvanasoares4@hotmail.com",
+  interesses: ["música", "viagem", "tecnologia"]
+};
+
+
+const jsonString = JSON.stringify(perfil);
+
+console.log(jsonString);
+
+
+
+{
+  "nome": "Maria",
+  "idade": 15,
+  "cidade": "Goiania",
+}
+
+
+
+ {
+  'nome': 'Pedro',
+  'idade': 5,
+  'cidade': 'São Paulo'
+}
+
+Erro ao carregar JSON
+
+
+
+ {
+  nome: Miguel,
+  idade: 10,
+  cidade: São Paulo
+}
+
+Erro ao carregar JSON
+
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+console.log(pagamentos);
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+const jsonString = JSON.stringify(pagamentos);
+console.log(jsonString);
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+console.table(pagamentos);
+
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+try {
+  const jsonString = JSON.stringify(pagamentos, null, 2); 
+  console.log("JSON válido:\n", jsonString);
+} catch (error) {
+  console.error("Erro ao validar JSON:", error);
+}
+
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+const jsonPagamentos = JSON.stringify(pagamentos, null, 2); 
+console.log(jsonPagamentos);
+
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+console.table(pagamentos, ["customer"]);
+
+
+
+
+const pagamentos = [
+  { paymentId: 1, customer: "Clara", amount: 1570.0 },
+  { paymentId: 2, customer: "Miguel", amount: 600.5 },
+  { paymentId: 3, customer: "Silvana", amount: 780.75 },
+  { paymentId: 4, customer: "Hudson", amount: 80.0 },
+  { paymentId: 5, customer: "Eva", amount: 420.25 }
+];
+
+const filtrados = pagamentos.filter(p => p.paymentId > 1);
+console.table(filtrados);
+
+
+
+
+
+
