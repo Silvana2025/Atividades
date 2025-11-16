@@ -1,0 +1,49 @@
+/* Page Layout */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  color: #333;
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+/* User List Grid */
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* User Card */
+.user-card {
+  background: #ffffff;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.user-card span {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Hover Effect */
+.user-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* Text Styling */
+.user-card p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #555;
+}

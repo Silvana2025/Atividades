@@ -1,0 +1,58 @@
+/* Main layout */
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Page title */
+.title {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+/* Grid layout */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+/* Card style */
+.post-card {
+  background: #fff;
+  padding: 20px 24px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Card hover animation */
+.post-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Labels */
+.post-card span {
+  font-weight: 600;
+  color: #444;
+}
+
+/* Title styling */
+.post-title {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* Body text */
+.post-body {
+  margin-top: 8px;
+  line-height: 1.5;
+  color: #555;
+}
