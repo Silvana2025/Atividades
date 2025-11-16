@@ -43,7 +43,7 @@ export default function IndicatorForm() {
   return (
     <div className="indicator-page">
       <form className="indicator-card" onSubmit={handleSubmit}>
-        <h1 className="indicator-title">Indicator Form</h1>
+        <h2 className="indicator-title">Indicator Form</h2>
 
         <div className="form-grid">
           <div className="form-field">
