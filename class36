@@ -66,4 +66,4 @@ class Carro {
 const carro1 = new Carro("Ford", "Azul", "Etanol");
 
 console.log(carro1.verificarMarca());
-console.log(carro1.verificarCor());
+console.log(carro1.verificarCor());gvit
