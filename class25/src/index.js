@@ -4,10 +4,12 @@ import './index.css';
 import Users from './Users';
 import reportWebVitals from './reportWebVitals';
 import Posts from './Posts';
+import UserList from './pages/UsersIndexPage';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <UserList />
     <Users />
     <Posts />
   </React.StrictMode>

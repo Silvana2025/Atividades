@@ -1,0 +1,473 @@
+class Pessoa {
+  constructor(nome) {
+    this.nome = nome;
+  }
+
+  sayHello() {
+    console.log(`Olá, meu nome é ${this.nome}.`);
+  }
+}
+
+const pessoa1 = new Pessoa("Silvana");
+
+pessoa1.sayHello();
+
+
+
+
+class Book {
+  constructor(titulo, autor) {
+    this.titulo = titulo;
+    this.autor = autor;
+  }
+
+  info() {
+    console.log(`O livro ${this.titulo} foi escrito por ${this.autor}.`);
+  }
+}
+
+const livro1 = new Book("Dom Casmurro", "Machado de Assis");
+
+livro1.info();
+
+
+
+
+class Counter {
+  constructor(start) {
+    this.value = start;
+  }
+
+  increment() {
+    this.value += 1;
+  }
+
+  show() {
+    console.log(this.value);
+  }
+}
+
+const counter = new Counter(4);
+
+counter.increment();
+counter.show(); 
+
+
+
+
+class Light {
+  constructor(isOn) {
+    this.isOn = isOn;
+  }
+
+  toggle() {
+    this.isOn = !this.isOn;
+  }
+
+  status() {
+    console.log(
+      `A luz está ${this.isOn ? "ligada" : "desligada"}.`
+    );
+  }
+}
+
+const light = new Light(false);
+
+light.status();
+light.toggle();
+light.status(); 
+
+
+
+
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  bark() {
+    console.log(`Woof! My name is ${this.name}.`);
+  }
+}
+
+const dog = new Dog("Lion");
+
+dog.bark();
+
+
+
+
+class Car {
+  constructor(modelo) {
+    this.modelo = modelo;
+  }
+
+  iniciar() {
+    console.log(`O carro ${this.modelo} iniciou.`);
+  }
+
+  parar() {
+    console.log(`O carro ${this.modelo} parou.`);
+  }
+}
+
+const carro = new Car("Golf");
+
+carro.iniciar();
+carro.parar();
+
+
+
+
+class BankAccount {
+  constructor(owner) {
+    this.owner = owner;
+    this.saldo = 0;
+  }
+
+  depositar(valor) {
+    if (valor > 0) {
+      this.saldo += valor;
+    } else {
+      console.log("O valor do depósito deve ser positivo.");
+    }
+  }
+
+  mostrarSaldo() {
+    console.log(`Saldo atual: ${this.saldo}`);
+  }
+}
+
+const conta = new BankAccount("João");
+
+
+conta.depositar(200);
+conta.mostrarSaldo(); 
+conta.depositar(-50); 
+
+
+
+class User {
+  constructor(username) {
+    this.username = username;
+  }
+
+  login() {
+    console.log(`Usuário ${this.username} fez login com sucesso.`);
+  }
+
+  logout() {
+    console.log(`Usuário ${this.username} fez logout.`);
+  }
+}
+
+const user = new User("silvana2525");
+
+
+user.login();
+user.logout();
+
+
+
+
+class Aluno {
+  constructor(nome) {
+    this.nome = nome;
+  }
+}
+
+class Curso {
+  constructor(titulo) {
+    this.titulo = titulo;
+  }
+}
+
+const aluno = new Aluno("Silvana");
+const curso = new Curso("Programação");
+
+console.log(`${aluno.nome} matriculada em ${curso.titulo}`);
+
+
+
+class Timer {
+  constructor(segundos) {
+    this.segundos = segundos;
+  }
+
+  tick() {
+    if (this.segundos > 0) {
+      this.segundos -= 1;
+    }
+  }
+
+  show() {
+    console.log(`Tempo restante: ${this.segundos} segundos`);
+  }
+}
+
+const timer = new Timer(20);
+
+
+timer.show();
+timer.tick();
+timer.show(); 
+
+
+
+
+class Animal {
+  eat() {
+    console.log("O animal está comendo.");
+  }
+}
+
+class Dog extends Animal {
+  
+}
+
+const dog = new Dog();
+
+dog.eat(); 
+
+
+
+class Person {
+  constructor(nome) {
+    this.nome = nome;
+  }
+}
+
+class Employee extends Person {
+  constructor(nome, salario) {
+    super(nome); 
+    this.salario = salario;
+  }
+}
+
+const emp = new Employee("Silvana", 5000);
+
+console.log(emp.nome);    
+console.log(emp.salario); 
+
+
+
+
+class Shape {
+  draw() {
+    console.log("Desenhando uma forma genérica.");
+  }
+}
+
+class Circle extends Shape {
+  draw() {
+    console.log("Desenhando um círculo.");
+  }
+}
+
+const circle = new Circle();
+
+circle.draw(); 
+
+
+
+class Device {
+  powerOn() {
+    console.log("O dispositivo está ligado.");
+  }
+}
+
+class Phone extends Device {
+  powerOn() {
+    super.powerOn(); 
+    console.log("O telefone está pronto para uso.");
+  }
+}
+
+const phone = new Phone();
+
+phone.powerOn();
+
+
+
+
+class Veiculo {
+  mover() {
+    console.log("O veículo está se movendo.");
+  }
+}
+
+class Carro extends Veiculo {
+  mover() {
+    console.log("O carro está dirigindo pela estrada.");
+  }
+}
+
+class Bicicleta extends Veiculo {
+  mover() {
+    console.log("A bicicleta está pedalando pelo parque.");
+  }
+}
+
+const meuCarro = new Carro();
+const minhaBicicleta = new Bicicleta();
+
+meuCarro.mover();      
+minhaBicicleta.mover(); 
+
+
+
+
+class Employee {
+  constructor(nome) {
+    this.nome = nome;
+  }
+
+  exibir() {
+    console.log(`Nome: ${this.nome}`);
+  }
+}
+
+class Manager extends Employee {
+  constructor(nome, departamento) {
+    super(nome); 
+    this.departamento = departamento;
+  }
+
+  exibir() {
+    console.log(`Nome: ${this.nome}, Departamento: ${this.departamento}`);
+  }
+}
+
+const gerente = new Manager("Silvana", "Financeiro");
+
+gerente.exibir(); 
+
+
+
+class Account {
+  status() {
+    console.log("Conta padrão.");
+  }
+}
+
+class PremiumAccount extends Account {
+  constructor(isActive) {
+    super();
+    this.isActive = isActive;
+  }
+
+  status() {
+    if (this.isActive) {
+      console.log("Conta premium ativa!");
+    } else {
+      console.log("Conta premium inativa.");
+    }
+  }
+}
+
+const premium1 = new PremiumAccount(true);
+const premium2 = new PremiumAccount(false);
+
+premium1.status(); 
+premium2.status(); 
+
+
+
+class Animal {
+  info() {
+    console.log("Este é um animal.");
+  }
+}
+
+class Dog extends Animal {
+  info() {
+    console.log("Este é um cachorro.");
+  }
+
+  fetch() {
+    console.log("O cachorro está buscando a bola.");
+  }
+}
+
+const dog = new Dog();
+
+dog.info();  
+dog.fetch(); 
+
+
+
+class Instrument {
+  play() {
+    console.log("Tocando um instrumento genérico.");
+  }
+}
+
+class Guitar extends Instrument {
+  play() {
+    console.log("Tocando a guitarra.");
+  }
+}
+
+class Piano extends Instrument {
+  play() {
+    console.log("Tocando o piano.");
+  }
+}
+
+const guitarra = new Guitar();
+const piano = new Piano();
+
+const instrumentos = [guitarra, piano];
+
+
+instrumentos.forEach(inst => inst.play());
+
+
+
+
+class User {
+  constructor(username) {
+    this.username = username;
+  }
+
+  describe() {
+    console.log(`Usuário: ${this.username}`);
+  }
+}
+
+class Admin extends User {
+  constructor(username, role) {
+    super(username);
+    this.role = role;
+  }
+
+  describe() {
+    super.describe(); 
+    console.log(`Função: ${this.role}`);
+  }
+
+  banUser(user) {
+    console.log(`${user.username} foi banido pelo administrador ${this.username}.`);
+  }
+}
+
+const admin = new Admin("Silvana", "Analista Admin");
+const user = new User("Luis");
+
+
+admin.describe();
+
+admin.banUser(user); 
+
+
+
+
+
+
+
+
+
+
+
+
+
