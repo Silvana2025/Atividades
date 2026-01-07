@@ -1,0 +1,59 @@
+    <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color threshold </title>
+    <link rel="stylesheet" href="class41.css" />
+  </head>
+
+  <body>
+    <main class="app" id="app">
+      <section class="card" aria-labelledby="title">
+        <header class="header">
+          <h1 id="title">Color Threshold</h1>
+          <p class="subtitle">Slide to choose what feels comfortable for you.</p>
+        </header>
+
+        <div class="display" role="status" aria-live="polite">
+          <div class="temp">
+            <span class="temp-value" id="tempValue">22</span>
+          </div>
+          <div class="label" id="tempLabel">😊</div>
+        </div>
+
+        <div class="slider-wrap">
+          <div class="slider-row">
+            <span class="min">0</span>
+
+            <input
+              id="tempSlider"
+              class="slider"
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              value="22"
+              aria-label="Temperature"
+            />
+
+            <span class="max">100</span>
+          </div>
+
+          <div class="ticks" aria-hidden="true">
+            <span>0</span><span>15</span><span>30</span><span>45</span><span>60</span><span>75</span><span>90</span><span>100</span>
+          </div>
+        </div>
+
+        <footer class="footer">       
+        </footer>
+
+        <p class="hint">
+          Refreshing the page resets the slider (no localStorage).
+        </p>
+      </section>
+    </main>
+
+    <script src="class41.js"></script>
+  </body>
+</html>
