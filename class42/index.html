@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV Profile — LinkedIn-style (Static)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Top nav (visual only) -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <div class="brand">
+          <div class="brand__logo" aria-hidden="true">in</div>
+          <span class="brand__name">Profile</span>
+        </div>
+
+        <div class="search" aria-label="Search (visual only)">
+          <span class="search__icon" aria-hidden="true">🔎</span>
+          <input class="search__input" type="text" placeholder="Search" disabled />
+        </div>
+
+        <nav class="nav">
+          <a class="nav__item" href="#about">About</a>
+          <a class="nav__item" href="#experience">Experience</a>
+          <a class="nav__item" href="#education">Education</a>
+          <a class="nav__item" href="#skills">Skills</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container layout">
+      <!-- LEFT (main content) -->
+      <section class="col col--main">
+        <!-- Profile header card -->
+        <article class="card profile">
+          <div class="profile__banner" aria-hidden="true"></div>
+
+          <div class="profile__body">
+             <img
+    class="profile__photo"
+    src="foto.jpeg"
+    alt="Profile photo placeholder"
+  />
+
+            <div class="profile__meta">
+              <div class="profile__headline">
+                <h1 class="profile__name">Silvana Soares</h1>
+                <p class="profile__title">Frontend Developer • React</p>
+              </div>
+
+              <div class="profile__info">
+                <span>Goiânia, Brazil</span>
+                <span class="dot">•</span>
+                <a href="#" class="link">Contact info</a>
+              </div>
+
+              <p class="profile__summary">
+                A technology student specializing in frontend development, fascinated by everything technology has to offer and its diverse possibilities, focused on learning more and more to work in the field.
+              </p>
+
+              <div class="profile__actions">
+                <a class="btn btn--primary" href="#contact">Open to</a>
+                <a class="btn btn--secondary" href="#contact">Message</a>
+                <a class="btn btn--ghost" href="#contact">Contact me</a>
+              </div>
+
+              <div class="profile__highlights">
+                <div class="pill">Open to: Remote</div>
+                <div class="pill">Tech: React, Javascript,css</div>
+                <div class="pill">Languages: PT/EN</div>
+                <div class="pill">Whatsapp: 6299150-7462</div>
+              </div>
+            </div>
+
+            <aside class="profile__mini">
+              <div class="mini">
+                <div class="mini__logo" aria-hidden="true">🏢</div>
+                <div>
+                  <div class="mini__title">Current</div>
+                  <div class="mini__text">Itaú Unibanco • Software Engineer</div>
+                </div>
+              </div>
+              <div class="mini">
+                <div class="mini__logo" aria-hidden="true">🎓</div>
+                <div>
+                  <div class="mini__title">Education</div>
+                  <div class="mini__text">Pontifical Catholic University of Goiás • Business Administration</div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </article>
+
+        <!-- About -->
+        <article class="card" id="about">
+          <div class="card__header">
+            <h2 class="card__title">About</h2>
+          </div>
+          <div class="card__content">
+            <p>
+              I am passionate and curious about the technological field, with a strong desire to learn and put the acquired knowledge into practice, so that in the future I can work brilliantly in the area... I have willpower and dedication to learning. I decided to make a career change, as I have a degree in Business Administration.
+            </p>
+          </div>
+        </article>
+
+        <!-- Experience -->
+        <article class="card" id="experience">
+          <div class="card__header">
+            <h2 class="card__title">Experience</h2>
+          </div>
+          <div class="card__content">
+            <div class="item">
+              <div class="item__logo" aria-hidden="true">🏦</div>
+              <div class="item__body">
+                <div class="item__top">
+                  <h3 class="item__title">Staff Software Engineer</h3>
+                  <span class="item__meta">Itaú Unibanco • Full-time</span>
+                </div>
+                <div class="item__meta">Out 2022 – Present • Remote</div>
+                <ul class="bullets">
+                  <li>Technical refinement.</li>
+                  <li>Log analysis.</li>
+                  <li>Software development.</li>
+                </ul>
+                <div class="chips">
+                  <span class="chip">Kotlin</span>
+                  <span class="chip">JAVA</span>
+                  <span class="chip">AWS</span>
+                </div>
+              </div>
+            </div>
+
+            <hr class="divider" />
+
+            <div class="item">
+              <div class="item__logo" aria-hidden="true">🧾</div>
+              <div class="item__body">
+                <div class="item__top">
+                  <h3 class="item__title">Developer</h3>
+                  <span class="item__meta">NTT Date • Full-time</span>
+                </div>
+                <div class="item__meta">2019 – 2022 • Brazil</div>
+                <ul class="bullets">
+                  <li>I worked on building microservices in Java using Spring, SQS, MySQL, DynamoDB, Redis, CloudWatch, Grafana, and Splunk..</li>
+                  
+                </ul>
+                <div class="chips">
+                  <span class="chip">JAVA</span><span class="chip">Splunk</span><span class="chip">Grafana</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Education -->
+        <article class="card" id="education">
+          <div class="card__header">
+            <h2 class="card__title">Education</h2>
+          </div>
+          <div class="card__content">
+            <div class="item">
+              <div class="item__logo" aria-hidden="true">🎓</div>
+              <div class="item__body">
+                <div class="item__top">
+                  <h3 class="item__title">Pontifical Catholic University of Goiás</h3>
+                  <span class="item__meta">Complete Higher Education • Business Administration</span>
+                </div>
+                <div class="item__meta">2007 – 2011</div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skills -->
+        <article class="card" id="skills">
+          <div class="card__header">
+            <h2 class="card__title">Skills</h2>
+          </div>
+          <div class="card__content">
+            <div class="skills">
+              <span class="skill">Ruby on Rails</span>
+              <span class="skill">PostgreSQL</span>
+              <span class="skill">React</span>
+              <span class="skill">TypeScript</span>
+              <span class="skill">AWS</span>
+              <span class="skill">Testing (RSpec/Jest)</span>
+              <span class="skill">System Design</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Skills -->
+        <article class="card" id="skills">
+          <div class="card__header">
+            <h2 class="card__title">Languages</h2>
+          </div>
+          <div class="card__content">
+            <div class="skills">
+              <span class="skill">English</span>
+              <span class="skill">Spanish</span>
+              <span class="skill">French</span>
+              <span class="skill">German</span>
+              
+            </div>
+          </div>
+        </article>
+
+        <!-- Contact -->
+        <article class="card" id="contact">
+          <div class="card__header">
+            <h2 class="card__title">Contact</h2>
+          </div>
+          <div class="card__content">
+            <p class="contact-line">
+              <span class="contact-label">Email:</span>
+              <a class="link" href="mailto:you@example.com">silvanasoares4@hotmail.com</a>
+            </p>
+            <p class="contact-line">
+              <span class="contact-label">Website:</span>
+              <a class="link" href="#" target="_blank" rel="noreferrer">itau.com.br</a>
+            </p>
+            <p class="contact-line">
+              <span class="contact-label">GitHub:</span>
+              <a class="link" href="#" target="_blank" rel="noreferrer">github.com/Silvana2025</a>
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- RIGHT (sidebar) -->
+      <aside class="col col--side">
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__title">Contact & Links</h2>
+          </div>
+          <div class="card__content list">
+            <a class="list__row link" href="#contact">Email: silvanasoares4@hotmail.com</a>
+            <a class="list__row link" href="#contact">Portfolio</a>
+            <a class="list__row link" href="#contact">GitHub: github.com/Silvana2025</a>
+            <a class="list__row link" href="#contact">LinkedIn: linkedin.com/in/silvana-soares</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__title">Highlights</h2>
+          </div>
+          <div class="card__content">
+            <ul class="bullets bullets--compact">
+              <li>10+ years of experience in software development</li>
+              <li>3x AWS certified</li>
+              <li>5 years in the banking sector</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__header">
+            <h2 class="card__title">People also viewed</h2>
+          </div>
+          <div class="card__content">
+            <div class="pv">
+              <div class="pv__avatar" aria-hidden="true"></div>
+              <div>
+                <div class="pv__name">Jane Developer</div>
+                <div class="pv__role">Backend Engineer • Rails</div>
+              </div>
+            </div>
+            <div class="pv">
+              <div class="pv__avatar" aria-hidden="true"></div>
+              <div>
+                <div class="pv__name">John Engineer</div>
+                <div class="pv__role">Full-stack • React</div>
+              </div>
+            </div>
+             <div class="pv">
+              <div class="pv__avatar" aria-hidden="true"></div>
+              <div>
+                <div class="pv__name">Hudson Engineer</div>
+                <div class="pv__role">Full-stack • JAVA</div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </aside>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <span>LinkedIn Corporation © 2026</span>
+        <span class="muted">Customize freely</span>
+      </div>
+    </footer>
+  </body>
+</html>
